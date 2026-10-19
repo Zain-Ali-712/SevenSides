@@ -1,0 +1,117 @@
+{
+  "_source": {
+    "primary": "Official Instagram post DWXXoPHDBqt (2026-03-26) — full menu board, @sevensides.pk",
+    "secondary": "Official Facebook 'MENU' post 2025-05-18 (5 images) — same items, older prices",
+    "note": "All prices are exclusive of taxes (stated on the official menu). Currency PKR.",
+    "foodpanda": "Blocked (403/timeout) on 2026-10-18. Web-search snippet of Foodpanda Lake City listed extra items NOT on the official menu (Mighty Glazed Wings Rs 920, Sriracha Chicken Wrap & Americana Chicken Wrap Rs 825, Cheese Sauce Rs 100, Caramel Dip Rs 200) with older prices. Excluded as unverified — see gaps.md.",
+    "priceHistory": "May 2025 → Mar 2026: Sando 895→975, Tenders 1195→1245, Wrap 825→875, Loaded Waffle Fries 825→895, Shakes 650→695, Crinkle/Waffle Fries 300→350, Mac & Cheese 450→500, Sauce 100→120, Meal (Fries & Drink) 400→500, Meal (Fries & Shake) 900→1000"
+  },
+  "heatLevels": [
+    { "id": "no-heat", "label": "No Heat", "chillies": 0 },
+    { "id": "country-heat", "label": "Country Heat", "chillies": 2 },
+    { "id": "screamer", "label": "Screamer", "chillies": 3 }
+  ],
+  "categories": [
+    {
+      "id": "bird-menu",
+      "name": "Bird Menu",
+      "items": [
+        { "id": "the-sando", "name": "The Sando", "price": 975, "desc": "House bread, hot chicken tenders, cheese fondue & comeback sauce", "heat": true, "signature": true }
+      ]
+    },
+    {
+      "id": "sliders",
+      "name": "Sliders",
+      "items": [
+        { "id": "hot-chicken", "name": "Hot Chicken", "price": 875, "desc": "House bun, hot chicken, coleslaw, pickles, cheese & comeback sauce", "heat": true },
+        { "id": "honey-sriracha", "name": "Honey Sriracha", "price": 875, "desc": "House bun, crispy chicken fillet, lettuce, pickles, cheese & honey sriracha sauce", "isNew": true },
+        { "id": "hot-honey-ranch", "name": "Hot Honey Ranch", "price": 875, "desc": "House bun, crispy chicken fillet, lettuce, cheese & honey ranch mayo", "isNew": true },
+        { "id": "caesar-chicken", "name": "Caesar Chicken", "price": 875, "desc": "House bun, crispy chicken fillet, lettuce, cheese & secret sauce", "isNew": true, "_note": "Spelled 'Caeser' on the menu board; 'Caesar' on the IG post DQWh6eHjD4L" }
+      ]
+    },
+    {
+      "id": "tenders",
+      "name": "Tenders",
+      "items": [
+        { "id": "red-tenders", "name": "Red Tenders", "price": 1245, "desc": "5 pcs of tenders served with fries & comeback sauce", "heat": true, "signature": true },
+        { "id": "crunchy-tenders", "name": "Crunchy Tenders", "price": 1245, "desc": "5 pcs of tenders served with fries & comeback sauce" }
+      ]
+    },
+    {
+      "id": "wraps",
+      "name": "Wraps",
+      "items": [
+        { "id": "crispy-chicken-wrap", "name": "Crispy Chicken", "price": 875, "desc": "Crispy chicken tenders, jalapeño, lettuce & secret sauce" }
+      ]
+    },
+    {
+      "id": "fries",
+      "name": "Hand Cut Fries",
+      "items": [
+        { "id": "loaded-waffle-fries", "name": "Loaded Waffle Fries", "price": 895, "desc": "Criss cross potato fries, hot chicken, pickles, parsley & sauce" }
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Hand Spun Shakes",
+      "items": [
+        { "id": "choco-berry", "name": "Choco Berry", "price": 695, "isNew": true },
+        { "id": "chocolate", "name": "Chocolate", "price": 695 },
+        { "id": "strawberry", "name": "Strawberry", "price": 695 },
+        { "id": "cookies-cream", "name": "Cookies & Cream", "price": 695 },
+        { "id": "vanilla", "name": "Vanilla", "price": 695 },
+        { "id": "salted-caramel", "name": "Salted Caramel", "price": 695 }
+      ]
+    },
+    {
+      "id": "treats",
+      "name": "SS Treats",
+      "items": [
+        { "id": "toastie", "name": "Toastie", "price": 675, "isNew": true, "options": { "label": "Choose your flavour", "values": ["Nutella", "Strawberry", "Dark Choc"] } },
+        { "id": "churros", "name": "Churros", "price": 550, "desc": "5 churros sticks dusted with cinnamon sugar & 1 dip", "options": { "label": "Choose your dip", "values": ["Nutella", "Caramel", "Dark Choc"] } }
+      ],
+      "addOns": [
+        { "id": "ice-cream-scoop", "name": "Add 1 scoop of vanilla ice cream", "price": 150 },
+        { "id": "extra-dip", "name": "Extra dip (Nutella / Caramel / Dark Choc)", "price": 250 }
+      ]
+    },
+    {
+      "id": "extras",
+      "name": "Extras",
+      "items": [
+        { "id": "crinkle-fries", "name": "Crinkle Fries", "price": 350 },
+        { "id": "waffle-fries", "name": "Waffle Fries", "price": 350 },
+        { "id": "mac-cheese", "name": "Mac & Cheese", "price": 500 }
+      ]
+    },
+    {
+      "id": "meal",
+      "name": "Make It A Meal",
+      "items": [
+        { "id": "meal-fries-drink", "name": "Fries & Drink", "price": 500 },
+        { "id": "meal-fries-shake", "name": "Fries & Shake", "price": 1000 }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "items": [
+        { "id": "pepsi", "name": "Pepsi", "price": 120 },
+        { "id": "diet-pepsi", "name": "Diet Pepsi", "price": 120 },
+        { "id": "7up", "name": "7Up", "price": 120 },
+        { "id": "mirinda", "name": "Mirinda", "price": 120 },
+        { "id": "water", "name": "Water", "price": 100 }
+      ]
+    },
+    {
+      "id": "sauces",
+      "name": "Sauce",
+      "items": [
+        { "id": "comeback", "name": "Comeback", "price": 120 },
+        { "id": "salsa", "name": "Salsa", "price": 120 },
+        { "id": "garlic-mayo", "name": "Garlic Mayo", "price": 120 },
+        { "id": "chipotle", "name": "Chipotle", "price": 120 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "_sources": {
+    "instagram_bio": "https://www.instagram.com/sevensides.pk/ (scraped 2026-10-18) — lists all 4 branches + phones",
+    "google_maps": "Apify compass/crawler-google-places run ZpQge2qVtOJv4LgY9 (2026-10-18)",
+    "facebook_page": "https://www.facebook.com/SevenSides.pk/ — address 15-A Street 2, Sector A, Phase 5, DHA; email sevensides.pk@gmail.com; created 2023-02-20",
+    "verification": "Phone numbers on Google Maps match the Instagram bio for all 4 branches. Opening dates come from official FB/IG posts."
+  },
+  "branches": [
+    {
+      "id": "dha-phase-5",
+      "name": "DHA Phase 5",
+      "label": "The Original",
+      "address": "15-A Street 2, Sector A, Phase 5, DHA, Lahore 54000",
+      "phone": "+92 319 6481040",
+      "lat": 31.4613693,
+      "lng": 74.4238279,
+      "services": ["Dine-in", "Takeaway", "Delivery"],
+      "hours": { "mon-thu": "12 PM – 12 AM", "fri-sun": "12 PM – 12:30 AM" },
+      "openingHoursRaw": [["Mon","12 PM–12 AM"],["Tue","12 PM–12 AM"],["Wed","12 PM–12 AM"],["Thu","12 PM–12 AM"],["Fri","12 PM–12:30 AM"],["Sat","12 PM–12:30 AM"],["Sun","12 PM–12:30 AM"]],
+      "opened": "2023-07 (IG/FB '1 year' post on 2024-07-18)",
+      "rating": 4.4,
+      "reviews": 1273,
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Seven%20Sides%20DHA%20Phase%205&query_place_id=ChIJcwBss98JGTkR1pWDtie9GDo",
+      "placeId": "ChIJcwBss98JGTkR1pWDtie9GDo"
+    },
+    {
+      "id": "lake-city",
+      "name": "Lake City",
+      "label": "Business Bay",
+      "address": "Plot C3-33, Business Bay, Block M1, Lake City, Lahore 54000",
+      "phone": "+92 370 7743936",
+      "lat": 31.3555432,
+      "lng": 74.2399118,
+      "services": ["Dine-in", "Takeaway", "Delivery"],
+      "openingHoursRaw": [["Mon","12 PM–12 AM"],["Tue","12 PM–12 AM"],["Wed","12 PM–12 AM"],["Thu","12 PM–12 AM"],["Fri","12 PM–12 AM"],["Sat","12 PM–1 AM"],["Sun","12 PM–12 AM"]],
+      "opened": "2024-12-21 (FB/IG launch post 2024-12-16)",
+      "rating": 4.3,
+      "reviews": 866,
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Seven%20Sides%20Lake%20City&query_place_id=ChIJSbgSvHCrGTkRUBKyXYFCsUk",
+      "placeId": "ChIJSbgSvHCrGTkRUBKyXYFCsUk"
+    },
+    {
+      "id": "cantt",
+      "name": "Cantt",
+      "label": "Girja Chowk",
+      "address": "Shop 5, Bagh Ali Road, Girja Chowk, Cantt, Lahore 54000",
+      "phone": "+92 322 7694926",
+      "lat": 31.5209805,
+      "lng": 74.3803311,
+      "services": ["Takeaway", "Delivery"],
+      "servicesNote": "Takeaway & Delivery only (official FB/IG post 2025-09-25)",
+      "openingHoursRaw": [["Mon","12 PM–1 AM"],["Tue","12 PM–1 AM"],["Wed","12 PM–1 AM"],["Thu","12 PM–1 AM"],["Fri","12 PM–1 AM"],["Sat","12 PM–1 AM"],["Sun","12 PM–1 AM"]],
+      "opened": "2025-09-13 (FB/IG launch post 2025-09-11)",
+      "rating": 4.0,
+      "reviews": 146,
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Seven%20Sides%20Cantt&query_place_id=ChIJPS4Y67kFGTkR61Pxi_cabKw",
+      "placeId": "ChIJPS4Y67kFGTkR61Pxi_cabKw"
+    },
+    {
+      "id": "model-town",
+      "name": "Model Town",
+      "label": "Bank Square",
+      "address": "Bank Square, 171 Market, Block C, Model Town, Lahore 54000",
+      "phone": "+92 303 4877017",
+      "lat": 31.488764,
+      "lng": 74.325674,
+      "services": ["Dine-in", "Takeaway", "Delivery"],
+      "servicesNote": "UNVERIFIED: services not stated in official posts; assumed full service",
+      "openingHoursRaw": [["Mon","12 PM–2 AM"],["Tue","12 PM–2 AM"],["Wed","12 PM–2 AM"],["Thu","12 PM–2 AM"],["Fri","12 PM–2 AM"],["Sat","12 PM–2 AM"],["Sun","12 PM–2 AM"]],
+      "opened": "2026-06-28 (FB/IG launch post 2026-06-19)",
+      "rating": 4.4,
+      "reviews": 239,
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Seven%20Sides%20Model%20Town&query_place_id=ChIJPy3JWdsFGTkRc9Oj6RPUu0w",
+      "placeId": "ChIJPy3JWdsFGTkRc9Oj6RPUu0w"
+    }
+  ],
+  "contact": {
+    "email": "sevensides.pk@gmail.com",
+    "whatsappCatalog": "https://wa.me/c/923196481040",
+    "instagram": "https://www.instagram.com/sevensides.pk/",
+    "facebook": "https://www.facebook.com/SevenSides.pk/"
+  }
+}

@@ -1,0 +1,349 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+  Seven Sides tokens. Every colour is sampled from official brand assets:
+  teal + mustard from the menu boards and the logo, chili/ember from the heat
+  meter flames, paper from the wrapping paper, ink from the illustration outlines.
+*/
+:root {
+  color-scheme: light;
+
+  --teal: #1fa0a5;
+  --teal-deep: #137479;
+  --teal-ink: #0d4f52;
+  --mustard: #fcb53f;
+  --mustard-soft: #fdd58a;
+  --chili: #d7262e;
+  --ember: #f26a2e;
+  --ink: #141414;
+  --paper: #fff8ea;
+  --white: #fffdf8;
+
+  /* shadcn semantic tokens mapped onto the brand */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--white);
+  --card-foreground: var(--ink);
+  --popover: var(--white);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: var(--mustard);
+  --secondary-foreground: var(--ink);
+  --muted: #f3ead7;
+  --muted-foreground: #5b5348;
+  --accent: var(--teal);
+  --accent-foreground: var(--ink);
+  --destructive: var(--chili);
+  --border: var(--ink);
+  --input: var(--ink);
+  --ring: var(--teal-deep);
+  --radius: 1.125rem;
+
+  --shadow-hard: 6px 6px 0 var(--ink);
+  --shadow-hard-sm: 4px 4px 0 var(--ink);
+  --shadow-hard-lg: 10px 10px 0 var(--ink);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* z-index scale */
+  --z-content: 10;
+  --z-header: 40;
+  --z-overlay: 50;
+}
+
+@theme inline {
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-teal-ink: var(--teal-ink);
+  --color-mustard: var(--mustard);
+  --color-mustard-soft: var(--mustard-soft);
+  --color-chili: var(--chili);
+  --color-ember: var(--ember);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-white: var(--white);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Bebas Neue = the logo wordmark. Outfit = menu-board descriptions.
+     Montserrat = mini tags and area lists on official posters. */
+  --font-display: var(--font-bebas), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+  --font-tag: var(--font-montserrat), system-ui, sans-serif;
+  --font-heading: var(--font-bebas), sans-serif;
+
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.25);
+  --radius-2xl: calc(var(--radius) * 1.6);
+
+  --shadow-hard: var(--shadow-hard);
+  --shadow-hard-sm: var(--shadow-hard-sm);
+  --shadow-hard-lg: var(--shadow-hard-lg);
+
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  --animate-spin-slow: spin 18s linear infinite;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  a,
+  button,
+  label,
+  summary,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-feature-settings: "ss01";
+  }
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--mustard);
+    color: var(--ink);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* Black pill label that sits on the top border of a panel. */
+  .pill-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+    line-height: 1;
+    padding: 0.42em 1em 0.34em;
+  }
+  /* Montserrat mini tag, like "Choose Your Heat Level" on the menu. */
+  .mini-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--teal-deep);
+    font-family: var(--font-tag);
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 0.4em 0.6em;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    padding: 0.8rem 1.5rem 0.7rem;
+    transition:
+      background-color 0.2s,
+      color 0.2s,
+      scale 0.15s var(--ease-out-expo);
+  }
+  .btn:active {
+    scale: 0.97;
+  }
+  .btn-ink {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-ink:hover {
+    background: var(--chili);
+  }
+  .btn-mustard {
+    background: var(--mustard);
+    color: var(--ink);
+  }
+  .btn-mustard:hover {
+    background: var(--mustard-soft);
+  }
+  .btn-paper {
+    background: var(--white);
+    color: var(--ink);
+  }
+  .btn-paper:hover {
+    background: var(--mustard-soft);
+  }
+  .btn:disabled {
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  /* Form fields: errors only after interaction (:user-invalid). */
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    background: var(--white);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--ink);
+    transition: box-shadow 0.15s;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder {
+    color: #6b6357;
+  }
+  .field input:focus-visible,
+  .field select:focus-visible,
+  .field textarea:focus-visible {
+    outline: none;
+    border-color: var(--teal-deep);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--teal) 30%, transparent);
+  }
+  .field .field-error {
+    display: none;
+    color: #a3151b;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .field :is(input, select, textarea):user-invalid {
+    border-color: var(--chili);
+    background: #fdecea;
+  }
+  .field:has(:is(input, select, textarea):user-invalid) .field-error {
+    display: block;
+  }
+}
+
+@keyframes drift {
+  from {
+    translate: -2% 0;
+  }
+  to {
+    translate: 2% -3%;
+  }
+}
+
+/* Menu-board drawings bob gently. */
+.illo-float {
+  animation: illo-float 5.5s ease-in-out infinite alternate;
+  --animation-reduced: none;
+}
+@keyframes illo-float {
+  from {
+    translate: 0 -6px;
+    rotate: -2deg;
+  }
+  to {
+    translate: 0 6px;
+    rotate: 2deg;
+  }
+}
+
+@keyframes marquee {
+  to {
+    translate: -50% 0;
+  }
+}
+
+/* Leaflet pins */
+.ss-pin {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--white);
+  border-radius: 50% 50% 50% 0;
+  rotate: -45deg;
+  background: var(--teal);
+  transition:
+    background 0.2s,
+    scale 0.2s;
+}
+.ss-pin span {
+  rotate: 45deg;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--white);
+}
+.ss-pin.is-active {
+  background: var(--chili);
+  scale: 1.18;
+}
+.ss-map .leaflet-container {
+  font-family: var(--font-sans);
+}
+.ss-map .leaflet-control-zoom a {
+  border: 2px solid var(--ink) !important;
+  color: var(--ink);
+}
+
+/* Dialog / sheet: keep the page from scrolling underneath (progressive). */
+[data-slot="dialog-content"],
+[data-slot="sheet-content"] {
+  overscroll-behavior: contain;
+}
+
+/* Reduced motion: per-animation fallbacks via --animation-reduced. */
+@property --animation-reduced {
+  syntax: "*";
+  inherits: false;
+  initial-value: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .illo-float,
+  .marquee-track,
+  .spin-slow {
+    animation: var(--animation-reduced) !important;
+  }
+  .btn:active {
+    scale: none;
+  }
+}
+
+/* OSM tiles, warmed slightly toward the brand paper colour */
+.ss-map .leaflet-tile-pane {
+  filter: saturate(0.85) sepia(0.12);
+}
